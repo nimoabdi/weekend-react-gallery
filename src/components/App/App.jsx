@@ -6,8 +6,8 @@ import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
 
-let [galleryList, setGalleryList] = useState([]);
-  const getNewGalleryItem = () => {
+const [galleryList, setGalleryList] = useState([]);
+  const getGallery = () => {
     axios({
         method: 'GET',
         url: '/gallery'
@@ -21,10 +21,26 @@ let [galleryList, setGalleryList] = useState([]);
         console.log('GET data failed', error);
     })
 }
+const updateGalleryItem = (pictureId) => {
+  axios({
+    method: 'PUT',
+    url: '/gallery'
+  })
+    .then((response) => {
+        console.log(response)
+        getGallery();
+    })
+    .catch((error) => {
+      console.log('Error in PUT updating', error);
+    })
+
+};
+
 useEffect(() =>{
   console.log('in useEffect');
-  getNewGalleryItem();
+  getGallery();
 }, [])
+
     return (
       <div className="App">
         <header className="App-header">
@@ -34,7 +50,7 @@ useEffect(() =>{
         
         <GalleryList
           galleryList={galleryList}
-          getNewGalleryItem={galleryList}
+          updateGalleryItem={updateGalleryItem}
         />
       </div>
     );

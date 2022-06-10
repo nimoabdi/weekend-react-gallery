@@ -1,8 +1,13 @@
 function GalleryItem({galleryList, getNewGalleryItem}) {
-    
+    // this toggles the image description
+    const [isImageFlipped, setIsImageFlipped] = useState(true)
     const onSubmit = () => {
-        getNewGalleryItem(picture.id);
+        updateGalleryItem(picture.id);
+    };
+    const flipImage = () => {
+        setI
     }
+
     return (
         <>
         </>

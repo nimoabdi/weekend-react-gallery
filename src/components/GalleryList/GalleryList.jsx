@@ -1,5 +1,5 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
-function GalleryList({galleryList, getNewGalleryItem}) {
+function GalleryList({galleryList, updateGalleryItem}) {
    
     return (
        
@@ -9,7 +9,7 @@ function GalleryList({galleryList, getNewGalleryItem}) {
         return < GalleryItem 
         key={picture.id}
         picture={picture}
-        getNewGalleryItem={getNewGalleryItem}
+        updateGalleryItem={updateGalleryItem}
         />
         })}
        </ul>
