@@ -24,7 +24,7 @@ const [galleryList, setGalleryList] = useState([]);
 const updateGalleryItem = (pictureId) => {
   axios({
     method: 'PUT',
-    url: `/gallery/${pictureId}`
+    url: `./gallery/like/${pictureId}`
   })
     .then((response) => {
         console.log(response)

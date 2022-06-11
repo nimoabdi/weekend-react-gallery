@@ -1,0 +1,31 @@
+body {
+    background-color: #F7E3D9;
+}
+ul {
+    background-color: #FEEDCF;
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    display: flexbox;
+    
+}
+h1{
+    background-color: #C6D8D5;
+}
+.App-header {
+    background-color: #C6D8D5;
+}
+img {
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    /* border-radius: 25px; */
+    border: 8px solid #C6D8D5;
+}
+.button {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

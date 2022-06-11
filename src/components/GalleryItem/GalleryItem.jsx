@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import './GalleryItem.css'
+
 function GalleryItem({picture, updateGalleryItem}) {
     // this toggles the image description
     const [isImageFlipped, setIsImageFlipped] = useState(true)
@@ -25,8 +27,6 @@ function GalleryItem({picture, updateGalleryItem}) {
           </li>
           Likes: {picture.likes}
           <button className='.button' onClick={onSubmit}>💟</button>
-
-
 
       </div>
     )
