@@ -1,5 +1,5 @@
 import { useState } from 'react';
-function GalleryItem({galleryList, getNewGalleryItem}) {
+function GalleryItem({picture, updateGalleryItem}) {
     // this toggles the image description
     const [isImageFlipped, setIsImageFlipped] = useState(true)
     const onSubmit = () => {
@@ -19,8 +19,16 @@ function GalleryItem({galleryList, getNewGalleryItem}) {
     }
 
     return (
-        <>
-        </>
+      <div className='.picture'>
+          <li onClick={flipImage}>
+              {renderImage()}
+          </li>
+          Likes: {picture.likes}
+          <button className='.button' onClick={onSubmit}>💟</button>
+
+
+
+      </div>
     )
       
 }
